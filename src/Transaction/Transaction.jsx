@@ -39,18 +39,23 @@ function TransactionPage() {
 
   return (
     <div className='container'>
-      <label htmlFor="amount-input">Transaction Amount:</label>
-      <input type="number" id="amount-input" value={amount} onChange={(e) => setAmount(e.target.value)} />
-      <br />
-      <label htmlFor="description-input">Description:</label>
-      <input type="text" id="description-input" value={description} onChange={(e) => setDescription(e.target.value)} />
-      <br />
-      <button onClick={handleAddAmount}>Add Amount</button>
-      <button onClick={handleWithdrawAmount}>Withdraw Amount</button>
-      <button onClick={handleShowBalance}>Show Balance</button>
-      <button onClick={handleTransactionHistory}>Transaction History</button>
-      <br />
-      {balanceShown && <label>Balance: Rs {balance.toFixed(2)}</label>}
+      <div className='box1'>
+        <label htmlFor="amount-input">Transaction Amount:</label>
+        <input type="number" id="amount-input" value={amount} onChange={(e) => setAmount(e.target.value)} />
+      </div>
+      <div className='box2'>
+        <label htmlFor="description-input">Description:</label>
+        <input type="text" id="description-input" value={description} onChange={(e) => setDescription(e.target.value)} />
+      </div>
+      <div className='box3'>
+        <button onClick={handleAddAmount}>Add Amount</button>
+        <button onClick={handleWithdrawAmount}>Withdraw Amount</button>
+        <button onClick={handleShowBalance}>Show Balance</button>
+        <button onClick={handleTransactionHistory}>Transaction History</button>
+      </div>
+      <div className='box'>
+        {balanceShown && <label>Balance: Rs {balance.toFixed(2)}</label>}
+      </div>
     </div>
   );
 }

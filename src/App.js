@@ -1,29 +1,27 @@
 import React from 'react';
-import './App.css';
-import './Register/Register'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Register from './Register/Register';
 import Login from './Login/Login';
 import TransactionPage from './Transaction/Transaction';
+import Home from './Home/Home';
+import './App.css';
 
 function App() {
   return (
-    <div>
-        <header className="header">Header</header>
-      <div className="button-container">
-      <button className="button">Register</button>
-      <button className="button1">Login</button>
-      </div>
+   <>
 
-      <footer className="footer"></footer>
-      <Register/>
-      <Login/>
-      <TransactionPage/>
-    </div>
-     
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/transaction" element={<TransactionPage />} />
+      </Routes>
+    </BrowserRouter>
 
-    
+
+   </>
   );
 }
-
 
 export default App;

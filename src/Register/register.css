@@ -1,46 +1,58 @@
 .register-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .register-form h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .register-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 2rem;
-    border-radius: 5px;
-  }
-  
-  .register-form label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-  
-  .register-form input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .register-form button {
-    background-color: #0077cc;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-  }
-  
-  .register-form button:hover {
-    background-color: #0066b3;
-  }
-  
+  padding: 0;
+  display: flex;
+  height: 120vh;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('Rbg.avif');
+  background-size: cover;
+  backdrop-filter: blur(200px); 
+}
+
+.register-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black; 
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: justify;
+  border: 3px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+  height: auto;
+  width: 50%; 
+  max-width: 300px;
+  margin: 0 auto; 
+  font-size: 1.2rem; 
+}
+
+
+.register-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  color: black; 
+}
+
+.register-form input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.register-form button {
+  background-color: #fff;
+  color: #048bec; 
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #ffffff; 
+}
