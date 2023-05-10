@@ -5,12 +5,12 @@
 }
 
 .footer {
-  background-image: url('footer.jpg');
+  background-image: url('hbg.avif');
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
   color: white;
-  display: flex;
+  margin-top: 350px;
 }
 
 

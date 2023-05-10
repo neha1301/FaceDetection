@@ -25,8 +25,7 @@ function Home() {
         <button className="button1"onClick={handleTransactionClick}>Transaction</button>
       
       </div>
-      <footer className="footer"></footer>
-      {/* <TransactionPage/> */}
+      <footer className={styles["footer"]}></footer>
     </div>
   );
 }
