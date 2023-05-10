@@ -1,5 +1,6 @@
 import React, {useState } from 'react';
-import '../Register/register.css';
+// import '../Register/register.module.css';
+import style from '../Register/register.module.css';
 
 const Register = () => {
   
@@ -23,21 +24,7 @@ const Register = () => {
     password: '',
     confirmPassword: '',
     // image: ''
-  });
-  // const videoRef = useRef(null);
-  // const [image, setImage] = useState(null);
-
-  // const handleCapture = () => {
-  //   const canvas = document.createElement('canvas');
-  //   canvas.width = videoRef.current.videoWidth;
-  //   canvas.height = videoRef.current.videoHeight;
-  //   canvas.getContext('2d').drawImage(videoRef.current, 0, 0);
-  //   const dataURL = canvas.toDataURL();
-  //   setImage(dataURL);
-  // };
-
-
-  
+  });  
   const validateEmail = email => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
@@ -98,24 +85,21 @@ const Register = () => {
     } else if (formData.password !== formData.confirmPassword) {
       errors.confirmPassword = 'Passwords do not match';
     }
-
-    // if (!formData.image) {
-    //   errors.image = 'Image is required';
-    // } else if (formData.image.type.indexOf('image') === -1) {
-    //   errors.image = 'Please select an image file';
-    // }
-
     if (Object.keys(errors).length === 0) {
       console.log(formData); // replace with actual submit logic
     } else {
-      setFormErrors(errors);
+      let errorMessage = '';
+      Object.keys(errors).forEach(key => {
+        errorMessage += errors[key] + '\n';
+      });
+      alert(errorMessage);
     }
   };
 
 
   return (
-    <div className='full'> 
-    <div className="register-form">
+    <div className={style['full']}> 
+    <div className={style['register-form']}>
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
         <label>

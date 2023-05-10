@@ -1,51 +1,52 @@
 .register-form {
-  padding: 0;
   display: flex;
-  height: 120vh;
+  height: 100vh;
+  width: 100vw;
   flex-direction: column;
   align-items: center;
   background-image: url('Rbg.avif');
   background-size: cover;
-  backdrop-filter: blur(200px); 
+  position: fixed;
 }
 
 .register-form h2 {
   font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
-  color: black; 
+  color: black;
 }
 
 .register-form form {
   display: flex;
   flex-direction: column;
   align-items: justify;
-  border: 3px solid #ccc;
-  padding: 1rem;
+  border: 2px solid black;
+  padding: 2rem;
   border-radius: 5px;
-  height: auto;
-  width: 50%; 
+  height: 680px;
+  width: 220px;
   max-width: 300px;
-  margin: 0 auto; 
-  font-size: 1.2rem; 
+  /* margin: 0 auto; */
+  font-size: 1.2rem;
 }
-
 
 .register-form label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-  color: black; 
+  margin-bottom: 2rem;
+  color: snow;
+  font-weight: bold;
 }
 
 .register-form input {
-  padding: 0.5rem;
+  padding: 0.8rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid grey;
 }
 
 .register-form button {
-  background-color: #fff;
-  color: #048bec; 
+  background-color: white;
+  color: blue;
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -54,5 +55,6 @@
 }
 
 .register-form button:hover {
-  background-color: #ffffff; 
+  background-color: #ffffff;
+  /* padding: 20px; */
 }

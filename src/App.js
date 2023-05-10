@@ -4,7 +4,7 @@ import Register from './Register/Register';
 import Login from './Login/Login';
 import TransactionPage from './Transaction/Transaction';
 import Home from './Home/Home';
-import './App.css';
+import './App.module.css';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../Transaction/transaction.css';
+import style from '../Transaction/transaction.module.css';
 
 function TransactionPage() {
   const [amount, setAmount] = useState('');
@@ -38,25 +38,28 @@ function TransactionPage() {
   const [balanceShown, setBalanceShown] = useState(false);
 
   return (
-    <div className='container'>
-      <div className='box1'>
-        <label htmlFor="amount-input">Transaction Amount:</label>
-        <input type="number" id="amount-input" value={amount} onChange={(e) => setAmount(e.target.value)} />
-      </div>
-      <div className='box2'>
-        <label htmlFor="description-input">Description:</label>
-        <input type="text" id="description-input" value={description} onChange={(e) => setDescription(e.target.value)} />
-      </div>
-      <div className='box3'>
-        <button onClick={handleAddAmount}>Add Amount</button>
-        <button onClick={handleWithdrawAmount}>Withdraw Amount</button>
-        <button onClick={handleShowBalance}>Show Balance</button>
-        <button onClick={handleTransactionHistory}>Transaction History</button>
-      </div>
-      <div className='box'>
-        {balanceShown && <label>Balance: Rs {balance.toFixed(2)}</label>}
-      </div>
-    </div>
+<div className={style['container']}>
+  <div className={style['box1']}>
+    <label htmlFor="amount-input">Transaction Amount:</label>
+    <input type="number" id="amount-input" value={amount} onChange={(e) => setAmount(e.target.value)} />
+  </div>
+  <div className={style['box2']}>
+    <label htmlFor="description-input">Description:</label>
+    <input type="text" id="description-input" value={description} onChange={(e) => setDescription(e.target.value)} />
+  </div>
+  <div className={style['box3']}>
+  <div className={style['button-container']}>
+    <button onClick={handleAddAmount}>Add Amount</button>
+    <button onClick={handleWithdrawAmount}>Withdraw Amount</button>
+  </div>
+  <div className={style['button-container']}>
+    <button onClick={handleShowBalance}>Show Balance</button>
+    <button onClick={handleTransactionHistory}>Transaction History</button>
+  </div>
+</div>
+
+</div>
+
   );
 }
 

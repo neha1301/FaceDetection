@@ -1,7 +1,7 @@
 import React from 'react';
-import './home.css';
+import styles from './home.module.css';
 import { useNavigate } from 'react-router-dom';
-import TransactionPage from '../Transaction/Transaction';
+// import TransactionPage from '../Transaction/Transaction';
 
 function Home() {
   const navigate = useNavigate();
@@ -17,8 +17,8 @@ function Home() {
   }
  
   return (
-    <div>
-      <header className="header">Header</header>
+    <div className={styles['home-container']}>
+      <header className={styles["header"]}>Header</header>
       <div className="button-container">
         <button className="button" onClick={handleRegisterClick}>Register</button>
         <button className="button1"onClick={handleLoginClick}>Login</button>
@@ -26,7 +26,7 @@ function Home() {
       
       </div>
       <footer className="footer"></footer>
-      <TransactionPage/>
+      {/* <TransactionPage/> */}
     </div>
   );
 }
